@@ -4,6 +4,7 @@ metadata:
   name: {{ include "api-chart.fullname" . }}
   labels:
     {{- include "api-chart.labels" . | nindent 4 }}
+  namespace: argocd
 spec:
   type: {{ .Values.service.type }}
   ports:
