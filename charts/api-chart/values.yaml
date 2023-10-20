@@ -11,7 +11,7 @@ image:
   tag: "latest"
 
 imagePullSecrets:
-  - name: myacrsecret-2
+  - name: myacrsecret-3
 nameOverride: ""
 fullnameOverride: ""
 
