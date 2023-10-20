@@ -4,6 +4,7 @@ metadata:
   name: {{ include "api-chart.fullname" . }}
   labels:
     {{- include "api-chart.labels" . | nindent 4 }}
+  namespace: argocd
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
