@@ -37,6 +37,7 @@ spec:
           ports:
             - name: http
               containerPort: 10101
+              targetPort: 10101
               protocol: TCP
           livenessProbe:
             httpGet:

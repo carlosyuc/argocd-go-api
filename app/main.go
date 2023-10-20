@@ -30,7 +30,7 @@ func getChannelStats() httprouter.Handle {
 func main() {
 
 	srv := &http.Server{
-		Addr:    ":80",
+		Addr:    ":10101",
 		Handler: newRouter(),
 	}
 
