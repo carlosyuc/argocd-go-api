@@ -48,7 +48,7 @@ ingress:
   hosts:
     - host: localhost
       paths:
-        - path: /
+        - path: /youtube/channel/stats
           pathType: ImplementationSpecific
   tls: []
   #  - secretName: chart-example-tls
