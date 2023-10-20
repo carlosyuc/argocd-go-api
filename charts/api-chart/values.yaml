@@ -39,7 +39,7 @@ securityContext: {}
 
 service:
   type: ClusterIP
-  port: 10101
+  port: 80
 
 ingress:
   enabled: true
