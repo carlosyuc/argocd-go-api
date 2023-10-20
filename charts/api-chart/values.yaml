@@ -11,7 +11,7 @@ image:
   tag: "latest"
 
 imagePullSecrets:
-  - name: myacrsecret-3
+  - name: k8srepo
 nameOverride: ""
 fullnameOverride: ""
 
