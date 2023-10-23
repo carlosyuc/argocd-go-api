@@ -4,6 +4,7 @@ metadata:
   name: example-ingress
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /$1
+  namespace: argocd
 spec:
   rules:
     - host: hello-world.info
