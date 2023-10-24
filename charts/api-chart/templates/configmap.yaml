@@ -4,7 +4,7 @@ metadata:
   name: {{ include "api-chart.fullname" . }}
   namespace: argocd
   labels:
-    {{- include "audit-log.labels" . | nindent 4 }}
+    {{- include "api-chart.labels" . | nindent 4 }}
 data:
   CUSTOMER: {{ .Values.customer | quote }}
   ENVIRONMENT: {{ .Values.environment | quote }}
