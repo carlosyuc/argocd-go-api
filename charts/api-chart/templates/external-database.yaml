@@ -1,0 +1,20 @@
+apiVersion: kubernetes-client.io/v1
+kind: ExternalSecret
+metadata:
+  name: go-api-secrets-database
+  namespace: argocd
+spec:
+  refreshInterval: 1h
+  secretStoreRef:
+    kind: SecretStore
+    name: example-secret-store
+
+  target:
+    name: secret-to-be-created
+    creationPolicy: Owner
+
+  data:
+  # name of the SECRET in the Azure KV (no prefix is by default a SECRET)
+  - secretKey: adidas-cloud-go-api-database
+    remoteRef:
+      key: adidas-cloud-go-api-database
