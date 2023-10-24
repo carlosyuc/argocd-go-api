@@ -22,8 +22,11 @@ func newRouter() *httprouter.Router {
 }
 
 func getChannelStats() httprouter.Handle {
+	customer := os.Getenv("CUSTOMER")
+	environment := os.Getenv("ENVIRONMENT")
+
 	return func(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
-		w.Write([]byte("response!"))
+		w.Write([]byte("response!" + customer + "/" + environment))
 	}
 }
 

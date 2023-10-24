@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "api-chart.fullname" . }}
+  namespace: argocd
+  labels:
+    {{- include "audit-log.labels" . | nindent 4 }}
+data:
+  CUSTOMER: {{ .Values.customer | quote }}
+  ENVIRONMENT: {{ .Values.environment | quote }}
