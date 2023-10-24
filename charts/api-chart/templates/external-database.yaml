@@ -17,4 +17,4 @@ spec:
   # name of the SECRET in the Azure KV (no prefix is by default a SECRET)
   - secretKey: adidas-cloud-go-api-database
     remoteRef:
-      key: adidas-cloud-go-api-database
+      key: secret/adidas-cloud-go-api-database
