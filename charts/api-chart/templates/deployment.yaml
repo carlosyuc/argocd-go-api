@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "api-chart.fullname" . }}
+  name: {{ .Values.customer }} - {{ include "api-chart.fullname" . }}
   labels:
     {{- include "api-chart.labels" . | nindent 4 }}
   namespace: argocd
